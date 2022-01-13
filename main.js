@@ -24,3 +24,26 @@ const displayProducts = function (arr) {
   });
 };
 displayProducts(data); //calling this function to display all dresses in the very beginning
+
+// //SORTING from HIGH TO LOW PRICE
+// const displayHighToLowPrice = function (arr) {
+//   const newArr = arr.sort(function (a, b) {
+//     return b.price.substring(1) - a.price.substring(1);
+//   });
+//   // console.log(newArr);
+// };
+
+// //SORTING from LOW TO HIGH PRICE
+// const displayHighToLowPrice = function (arr) {
+//   const newArr = arr.sort(function (a, b) {
+//     return a.price.substring(1) - b.price.substring(1);
+//   });
+//   // console.log(newArr);
+// };
+
+//sorting by NAME
+// arr.sort(function (a, b) {
+//   let nameA = a.name.toLowerCase();
+//   let nameB = b.name.toLowerCase();
+//   return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+// });

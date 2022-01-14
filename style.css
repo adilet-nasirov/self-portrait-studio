@@ -59,7 +59,7 @@ body {
 }
 .left-navbar a:hover,
 .right-navbar a:hover {
-  border-bottom: 2px solid black;
+  text-decoration: underline;
 }
 
 /* DROPDOWN STYLING */

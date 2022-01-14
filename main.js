@@ -10,20 +10,13 @@ const sortAtoZ = document.querySelector("#sort-AtoZ");
 const sortZtoA = document.querySelector("#sort-ZtoA");
 const viewAllBtn = document.querySelector("#view-all");
 
-//HELPER FUNCTIONS
-//Function to clear the main from all products
-const clearMain = function () {
-  while (main.firstChild) {
-    main.removeChild(main.firstChild);
-  }
-};
+const searchBtn = document.getElementById("search-btn");
+const searchWrap = document.querySelector(".search-wrap");
+const searchContainer = document.querySelector("#search-big-container");
 
-//Function to reset after searching
-// function resetDisplay(arr) {
-//   input.value = "";
-//   clearMain();
-//   displayProducts(data);
-// }
+const input = document.querySelector("#search-input");
+
+//HELPER FUNCTIONS
 
 //Function to display all products
 const displayProducts = function (arr) {
@@ -44,6 +37,31 @@ const displayProducts = function (arr) {
   });
 };
 displayProducts(data); //calling this function to display all dresses in the very beginning
+
+//Function to clear the main from all products
+const clearMain = function () {
+  while (main.firstChild) {
+    main.removeChild(main.firstChild);
+  }
+};
+
+// display search input
+const displaySearchInput = () => {
+  searchWrap.style.display = "flex";
+};
+searchBtn.addEventListener("click", displaySearchInput);
+
+//hide search input
+document.onclick = function (e) {
+  if (
+    e.target.id != searchContainer.id &&
+    e.target.id !== searchBtn.id &&
+    e.target.id !== input.id
+  )
+    searchWrap.style.display = "none";
+};
+
+
 
 //SORTING from HIGH TO LOW PRICE
 const displayHighToLowPrice = function (arr) {

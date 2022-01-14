@@ -6,9 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Self-Portrait</title>
     <link rel="stylesheet" href="dresses-style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.self-portrait-studio.com/media/favicon/default/Favicon.jpg"
+    />
     <script defer type="module" src="data.js"></script>
   </head>
   <body>
+    <div class="search-wrap">
+      <div id="search-big-container">
+        <div class="search-left-container">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="SEARCH FOR INSPIRATION"
+          />
+          <div class="search-links">
+            <a href="dresses.html">DRESSES</a>
+            <a>MINI</a>
+            <a>RED</a>
+            <a>WHITE</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
     <div class="navbar">
       <div class="left-navbar">
         <a href="#">New Arrivals</a>
@@ -42,7 +66,7 @@
         <a href="#">Kids</a>
       </div>
       <div class="right-navbar">
-        <a href="#">Search</a>
+        <a id="search-btn" href="#">Search</a>
         <a href="#">My Account</a>
         <a href="#">Cart</a>
         <a href="#">Shipping to</a>
@@ -116,6 +140,7 @@
         <button><a id="view-all" href=""> VIEW ALL</a></button>
       </div>
     </section>
+
     <div class="main"></div>
     <script type="module" src="main.js"></script>
   </body>

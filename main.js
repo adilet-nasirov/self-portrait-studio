@@ -13,10 +13,17 @@ const viewAllBtn = document.querySelector("#view-all");
 const searchBtn = document.getElementById("search-btn");
 const searchWrap = document.querySelector(".search-wrap");
 const searchContainer = document.querySelector("#search-big-container");
+const searchResultsContainter = document.querySelector(".search-results");
 
-const input = document.querySelector("#search-input");
+const searchBar = document.querySelector("#search-bar");
+const searchLinksContainer = document.querySelector(".search-links");
+const searchLinksElements = document.querySelectorAll(".search-link");
 
-//HELPER FUNCTIONS
+//variables for displaying search result num
+const searchResultNum = document.createElement("p");
+searchResultNum.classList.add("search-result-number");
+
+//-----------HELPER FUNCTIONS
 
 //Function to display all products
 const displayProducts = function (arr) {
@@ -36,34 +43,110 @@ const displayProducts = function (arr) {
     main.appendChild(cardDiv);
   });
 };
-displayProducts(data); //calling this function to display all dresses in the very beginning
+//calling this function to display all dresses in the very beginning
+displayProducts(data);
 
-//Function to clear the main from all products
+//function to clear the main from all products
 const clearMain = function () {
   while (main.firstChild) {
     main.removeChild(main.firstChild);
   }
 };
 
-// display search input
-const displaySearchInput = () => {
+//function to clear the search results container from all products
+const clearResultsContainer = function () {
+  while (searchResultsContainter.firstChild) {
+    searchResultsContainter.removeChild(searchResultsContainter.firstChild);
+  }
+};
+
+//function to display search bar
+const displaySearchBar = () => {
   searchWrap.style.display = "flex";
 };
-searchBtn.addEventListener("click", displaySearchInput);
+searchBtn.addEventListener("click", displaySearchBar);
 
-//hide search input
+//function to hide search input and to clear search results
 document.onclick = function (e) {
   if (
     e.target.id != searchContainer.id &&
     e.target.id !== searchBtn.id &&
-    e.target.id !== input.id
+    e.target.id !== searchBar.id
   )
     searchWrap.style.display = "none";
+  searchBar.value = "";
+  searchResultNum.style.display = "none";
+  clearResultsContainer();
 };
 
+//function to display an error message if there are no results
+const showErrorMessage = function () {
+  const errorMessage = document.createElement("p");
+  errorMessage.classList.add("error-message");
+  errorMessage.innerText = "No results found. Sorry!";
+  searchResultsContainter.appendChild(errorMessage);
+  setTimeout(() => searchResultsContainter.removeChild(errorMessage), 3000);
+};
 
+//Function to display search results
+const displaySearchResults = function (arr, searchValue) {
+  if (arr.length > 0) {
+    arr.forEach((el) => {
+      const searchCard = document.createElement("div");
+      searchCard.classList.add("search-card");
+      searchCard.innerHTML = `
+        <div class="search-img-container">
+          <img class="search-image" src=${el.image} alt="">
+        </div>
+        <div class="search-card-info">
+          <p class="search-card-name">${el.name}</p>
+          <p class="search-card-price">${el.price}</p>
+        </div>`;
+      searchResultsContainter.appendChild(searchCard);
+    });
+    searchResultNum.innerText = `${arr.length} Result(s) found for '${searchValue}'`;
+    searchLinksContainer.appendChild(searchResultNum);
+    searchResultNum.style.display = "block";
+  }
+  if (arr.length == 0) {
+    showErrorMessage();
+  }
+};
 
-//SORTING from HIGH TO LOW PRICE
+//----------------MAIN FUNCTIONS
+
+//////Searching by input value in search bar
+function searchProducts(e) {
+  clearResultsContainer();
+
+  //creating a new array, which will hold products meeting the search input
+  let filteredArray = [];
+  // console.log(input);
+  const searchInput = e.target.value.trim().toLowerCase().split(" ");
+  console.log(searchInput);
+  //looping through each element(dress) of the Data array and adding matching dresses to the new array
+  if (searchInput.length > 0) {
+    filteredArray = data.filter((el) => {
+      return (
+        el.name.toLowerCase().includes(searchInput) ||
+        el.color.includes(searchInput) ||
+        el.style.includes(searchInput) ||
+        el.length.includes(searchInput)
+      );
+    });
+    while (searchLinksContainer.firstChild) {
+      searchLinksContainer.removeChild(searchLinksContainer.firstChild);
+    }
+    // displaying the objs(dresses) contained in the new array (objs containing the search input)
+    displaySearchResults(filteredArray, searchInput);
+  } else {
+    clearResultsContainer();
+    showErrorMessage();
+  }
+}
+searchBar.addEventListener("change", searchProducts);
+
+////////SORTING from HIGH TO LOW PRICE
 const displayHighToLowPrice = function (arr) {
   clearMain();
   const newArr = data.slice(0).sort(function (a, b) {
@@ -73,7 +156,7 @@ const displayHighToLowPrice = function (arr) {
 };
 sortHighLow.addEventListener("click", displayHighToLowPrice);
 
-//SORTING from LOW TO HIGH PRICE
+//////SORTING from LOW TO HIGH PRICE
 const displayLowToHighPrice = function (arr) {
   clearMain();
   const newArr = data.slice(0).sort(function (a, b) {
@@ -83,7 +166,7 @@ const displayLowToHighPrice = function (arr) {
 };
 sortLowHigh.addEventListener("click", displayLowToHighPrice);
 
-//SORTING by NAME (A to Z)
+//////SORTING by NAME (A to Z)
 const displayAtoZ = function (arr) {
   clearMain();
   const newArr = data.slice(0).sort(function (a, b) {
@@ -95,7 +178,7 @@ const displayAtoZ = function (arr) {
 };
 sortAtoZ.addEventListener("click", displayAtoZ);
 
-//SORTING by NAME (Z to A)
+//////SORTING by NAME (Z to A)
 const displayZtoA = function (arr) {
   clearMain();
   const newArr = data.slice(0).sort(function (a, b) {
@@ -107,7 +190,7 @@ const displayZtoA = function (arr) {
 };
 sortZtoA.addEventListener("click", displayZtoA);
 
-//VIEW ALL
+//////VIEW ALL
 // Function to view all products
 const viewAll = function (arr) {
   clearMain();

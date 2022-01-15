@@ -2,6 +2,52 @@
 export const getData = () => {
   return [
     {
+      name: "Sequin Gathered Asymmetric Grey Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-913-1111.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-913-3.jpg",
+      price: "$525.00",
+      style: "off-shoulder",
+      length: "midi",
+      color: "grey",
+    },
+
+    {
+      name: "Textured Off Shoulder Red Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-044-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-044-3_1.jpg",
+      price: "$495.00",
+      style: "off-shoulder",
+      length: "midi",
+      color: "red",
+    },
+
+    {
+      name: "Bouclé And Chiffon Tailored Cream Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-925-1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-925-3.jpg",
+      price: "$570.00",
+      style: "long-sleeve",
+      length: "midi",
+      color: "cream",
+    },
+    {
+      name: "Ivory Contrast Yarn Button Down Knit Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-146-1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-146-3.jpg",
+      price: "$510.00",
+      style: "long-sleeve",
+      length: "mini",
+      color: "white",
+    },
+    {
       name: "Ivory Tape Yarn Stripe Knit Mini Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-143-1_1.jpg",
@@ -35,182 +81,6 @@ export const getData = () => {
       color: "white",
     },
     {
-      name: "Ivory Contrast Yarn Button Down Knit Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-146-1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-146-3.jpg",
-      price: "$510.00",
-      style: "long-sleeve",
-      length: "mini",
-      color: "white",
-    },
-    {
-      name: "Ivory Guipure Lace & Taffeta Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907-1-square_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907-3_1.jpg",
-      price: "$540.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "white",
-    },
-    {
-      name: "Red Guipure Lace & Taffeta Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907r-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907r-3_1.jpg",
-      price: "$540.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "red",
-    },
-    {
-      name: "Green Stripe Knit Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-909-1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-909-3.jpg",
-      price: "$510.00",
-      style: "short-sleeve",
-      length: "mini",
-      color: "green",
-    },
-    {
-      name: "Red Stripe Knit Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-910-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-910-3_1.jpg",
-      price: "$510.00",
-      style: "short-sleeve",
-      length: "mini",
-      color: "red",
-    },
-    {
-      name: "Diamante Collar Crepe White Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-903-1_1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-903-3_1.jpg",
-      price: "$525.00",
-      style: "short-sleeve",
-      length: "mini",
-      color: "white",
-    },
-    {
-      name: "Diamante Collar Cotton Pink Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-904-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-904-3_1.jpg",
-      price: "$585.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "pink",
-    },
-    {
-      name: "Pink Guipure Lace Taffeta Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-906-1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-906-3.jpg",
-      price: "$465.00",
-      style: "short-sleeve",
-      length: "mini",
-      color: "pink",
-    },
-    {
-      name: "Red Cotton Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-940-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-940-3_1.jpg",
-      price: "$480.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "red",
-    },
-    {
-      name: "Pink Cotton Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-905-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-905-3_1.jpg",
-      price: "$525.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "pink",
-    },
-    {
-      name: "Sequin Gathered Asymmetric Grey Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-913-1111.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-913-3.jpg",
-      price: "$525.00",
-      style: "",
-      length: "midi",
-      color: "grey",
-    },
-    {
-      name: "Red Chiffon Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-931-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-931-3.jpg",
-      price: "$465.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "red",
-    },
-    {
-      name: "Textured Off Shoulder Red Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-044-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-044-3_1.jpg",
-      price: "$495.00",
-      style: "off-shoulder",
-      length: "midi",
-      color: "red",
-    },
-    {
-      name: "Red Chiffon Mini Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-932-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-932-3.jpg",
-      price: "$440.00",
-      style: "short-sleeve",
-      length: "mini",
-      color: "red",
-    },
-    {
-      name: "Burgundy Guipure Lace Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-129-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-129-3_1.jpg",
-      price: "$525.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "red",
-    },
-    {
-      name: "Cream Tailored Bouclé And Chiffon Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-925-1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-925-3.jpg",
-      price: "$570.00",
-      style: "long-sleeve",
-      length: "midi",
-      color: "cream",
-    },
-    {
       name: "Scallop Yellow Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-016m-1.jpg",
@@ -220,6 +90,50 @@ export const getData = () => {
       style: "sleveless",
       length: "midi",
       color: "yellow",
+    },
+    {
+      name: "Ivory Vintage Floral Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-085a-1_a.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-085a-3_a.jpg",
+      price: "$495.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "white",
+    },
+    {
+      name: "Iris Black Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-972-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-972-3_1.jpg",
+      price: "$510.00",
+      style: "long-sleeve",
+      length: "midi",
+      color: "black",
+    },
+    {
+      name: "Pink Dot Mesh Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-037-1-2.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-037-3-2.jpg",
+      price: "$525.00",
+      style: "long-sleeve",
+      length: "midi",
+      color: "pink",
+    },
+    {
+      name: "Crepe Puff Sleeve Black Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/c/sc19-009-1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/c/sc19-009-3.jpg",
+      price: "$495.00",
+      style: "off-shoulder",
+      length: "midi",
+      color: "black",
     },
     {
       name: "Cream Chiffon Midi Dress",
@@ -255,7 +169,7 @@ export const getData = () => {
       color: "black",
     },
     {
-      name: "Navy Metallic Boucle Tailored Midi Dress",
+      name: "Metallic Boucle Tailored Navy Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-945-1.jpg",
       image2:
@@ -266,7 +180,7 @@ export const getData = () => {
       color: "blue",
     },
     {
-      name: "Black Lurex Mini Dress",
+      name: "Lurex Black Mini Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-093d-1.jpg",
       image2:
@@ -332,7 +246,7 @@ export const getData = () => {
       color: "grey",
     },
     {
-      name: "Black Lace Applique Knit Midi Dress",
+      name: "Lace Applique Knit Black Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-098a-1.jpg",
       image2:
@@ -343,7 +257,7 @@ export const getData = () => {
       color: "black",
     },
     {
-      name: "Black Crepe Diamante Mini Dress",
+      name: "Crepe Diamante Black Mini Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-046-11.jpg",
       image2:
@@ -354,18 +268,7 @@ export const getData = () => {
       color: "black",
     },
     {
-      name: "Blush Guipure Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-043-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-043-3_1.jpg",
-      price: "$510.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "pink",
-    },
-    {
-      name: "Brown Fine Lace Midi Dress",
+      name: "Fine Lace Brown Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/a/w/aw21-006-1.jpg",
       image2:
@@ -375,6 +278,18 @@ export const getData = () => {
       length: "midi",
       color: "brown",
     },
+    {
+      name: "Guipure Blush Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-043-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-043-3_1.jpg",
+      price: "$510.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "pink",
+    },
+
     {
       name: "Ivory Textured Leaf Midi Dress",
       image:
@@ -387,7 +302,7 @@ export const getData = () => {
       color: "white",
     },
     {
-      name: "Black Jersey Gathered Midi Dress",
+      name: "Jersey Gathered Black Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/a/w/aw21-033m-1.jpg",
       image2:
@@ -398,7 +313,7 @@ export const getData = () => {
       color: "black",
     },
     {
-      name: "Black Lace Knit Midi Dress",
+      name: "Lace Knit Black Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/a/w/aw21-902-1.jpg",
       image2:
@@ -409,7 +324,7 @@ export const getData = () => {
       color: "black",
     },
     {
-      name: "Black Lurex Contrast Trim Midi Dress",
+      name: "Lurex Contrast Trim Black Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/a/w/aw21-065m-1_1.jpg",
       image2:
@@ -529,17 +444,7 @@ export const getData = () => {
       length: "midi",
       color: "white",
     },
-    {
-      name: "Ivory Vintage Floral Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-085a-1_a.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-085a-3_a.jpg",
-      price: "$495.00",
-      style: "short-sleeve",
-      length: "midi",
-      color: "white",
-    },
+
     {
       name: "White Guipure Lace Midi Dress",
       image:
@@ -552,7 +457,7 @@ export const getData = () => {
       color: "white",
     },
     {
-      name: "Black Azaelea Midi Dress",
+      name: "Azaelea Black Midi Dress",
       image:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/a/w/aw20-128-1.jpg",
       image2:
@@ -584,17 +489,7 @@ export const getData = () => {
       length: "midi",
       color: "white",
     },
-    {
-      name: "Black Crepe Puff Sleeve Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/c/sc19-009-1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/c/sc19-009-3.jpg",
-      price: "$495.00",
-      style: "off-shoulder",
-      length: "midi",
-      color: "black",
-    },
+
     {
       name: "Starlet Rose Lace Midi Dress",
       image:
@@ -661,28 +556,7 @@ export const getData = () => {
       length: "midi",
       color: "white",
     },
-    {
-      name: "Pink Dot Mesh Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-037-1-2.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss21-037-3-2.jpg",
-      price: "$525.00",
-      style: "long-sleeve",
-      length: "midi",
-      color: "pink",
-    },
-    {
-      name: "Black Iris Midi Dress",
-      image:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-972-1_1.jpg",
-      image2:
-        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-972-3_1.jpg",
-      price: "$510.00",
-      style: "",
-      length: "midi",
-      color: "black",
-    },
+
     {
       name: "Lime Azaelea Yellow Midi Dress",
       image:
@@ -704,6 +578,138 @@ export const getData = () => {
       style: "sleveless",
       length: "midi",
       color: "blue",
+    },
+    {
+      name: "Red Guipure Lace & Taffeta Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907r-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907r-3_1.jpg",
+      price: "$540.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "red",
+    },
+    {
+      name: "Green Stripe Knit Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-909-1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-909-3.jpg",
+      price: "$510.00",
+      style: "short-sleeve",
+      length: "mini",
+      color: "green",
+    },
+    {
+      name: "Red Stripe Knit Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-910-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-910-3_1.jpg",
+      price: "$510.00",
+      style: "short-sleeve",
+      length: "mini",
+      color: "red",
+    },
+    {
+      name: "Diamante Collar Crepe White Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-903-1_1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-903-3_1.jpg",
+      price: "$525.00",
+      style: "short-sleeve",
+      length: "mini",
+      color: "white",
+    },
+    {
+      name: "Diamante Collar Cotton Pink Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-904-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-904-3_1.jpg",
+      price: "$585.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "pink",
+    },
+    {
+      name: "Pink Guipure Lace Taffeta Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-906-1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-906-3.jpg",
+      price: "$465.00",
+      style: "short-sleeve",
+      length: "mini",
+      color: "pink",
+    },
+    {
+      name: "Red Cotton Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-940-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-940-3_1.jpg",
+      price: "$480.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "red",
+    },
+    {
+      name: "Pink Cotton Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-905-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-905-3_1.jpg",
+      price: "$525.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "pink",
+    },
+    {
+      name: "Red Chiffon Mini Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-932-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-932-3.jpg",
+      price: "$440.00",
+      style: "short-sleeve",
+      length: "mini",
+      color: "red",
+    },
+    {
+      name: "Guipure Lace Burgundy Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-129-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-129-3_1.jpg",
+      price: "$525.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "red",
+    },
+    {
+      name: "Ivory Guipure Lace & Taffeta Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907-1-square_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-907-3_1.jpg",
+      price: "$540.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "white",
+    },
+    {
+      name: "Red Chiffon Midi Dress",
+      image:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-931-1_1.jpg",
+      image2:
+        "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/r/s/rs22-931-3.jpg",
+      price: "$465.00",
+      style: "short-sleeve",
+      length: "midi",
+      color: "red",
     },
   ];
 };

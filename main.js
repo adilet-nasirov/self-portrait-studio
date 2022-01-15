@@ -1,6 +1,7 @@
 "use strict";
 import { getData } from "./data.js";
 const data = getData();
+// import { saveClickedItem } from "./open-product-page.js";
 
 //VARIABLES
 const main = document.querySelector(".main");
@@ -99,7 +100,7 @@ const displaySearchResults = function (arr, searchValue) {
       searchCard.classList.add("search-card");
       searchCard.innerHTML = `
         <div class="search-img-container">
-          <img class="search-image" src=${el.image} alt="">
+            <img class="search-image" src=${el.image} alt="">
         </div>
         <div class="search-card-info">
           <p class="search-card-name">${el.name}</p>
@@ -116,6 +117,7 @@ const displaySearchResults = function (arr, searchValue) {
   }
 };
 
+//
 
 //----------------MAIN FUNCTIONS
 
@@ -201,6 +203,19 @@ const viewAll = function (arr) {
   displayProducts(data);
 };
 viewAllBtn.addEventListener("click", viewAll);
+
+//EVENT LISTENER FOR CARDS
+
+const saveClickedItem = (e) => {
+  const imgSrc = e.target.src;
+  console.log(e.target);
+  const newArr = data.filter((el) => el.image2 === imgSrc);
+  //saved the new ARR in local storage
+  localStorage.setItem("clickedItem", JSON.stringify(newArr));
+  console.log(newArr);
+  const openNewPage = window.open("product-page.html", "_self");
+};
+main.addEventListener("click", saveClickedItem);
 
 //FILTER BY STYLE
 

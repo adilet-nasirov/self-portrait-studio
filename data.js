@@ -8,7 +8,7 @@ export const getData = () => {
       image2:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/s/s/ss22-913-3.jpg",
       price: "$525.00",
-      style: "",
+      style: "off-shoulder",
       length: "midi",
       color: "grey",
     },
@@ -109,7 +109,7 @@ export const getData = () => {
       image2:
         "https://www.self-portrait-studio.com/media/catalog/product/cache/84462215a41ce091fa3cb67564834b11/p/f/pf21-972-3_1.jpg",
       price: "$510.00",
-      style: "",
+      style: "long-sleeve",
       length: "midi",
       color: "black",
     },

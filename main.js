@@ -19,6 +19,9 @@ const searchBar = document.querySelector("#search-bar");
 const searchLinksContainer = document.querySelector(".search-links");
 const searchLinksElements = document.querySelectorAll(".search-link");
 
+//VARIABLES for FILTERING
+const longSleeve = document.querySelector("#long-sleeve");
+
 //variables for displaying search result num
 const searchResultNum = document.createElement("p");
 searchResultNum.classList.add("search-result-number");
@@ -113,6 +116,7 @@ const displaySearchResults = function (arr, searchValue) {
   }
 };
 
+
 //----------------MAIN FUNCTIONS
 
 //////Searching by input value in search bar
@@ -197,3 +201,18 @@ const viewAll = function (arr) {
   displayProducts(data);
 };
 viewAllBtn.addEventListener("click", viewAll);
+
+//FILTER BY STYLE
+
+//long-sleeve
+const filterLongSleeve = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "long-sleeve");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+longSleeve.addEventListener("click", filterLongSleeve);
+
+//FILTER BY LENGTH
+
+//FILTER by color - red

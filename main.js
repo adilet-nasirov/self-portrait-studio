@@ -1,6 +1,7 @@
 "use strict";
 import { getData } from "./data.js";
 const data = getData();
+// import { saveClickedItem } from "./open-product-page.js";
 
 //VARIABLES
 const main = document.querySelector(".main");
@@ -18,6 +19,9 @@ const searchResultsContainter = document.querySelector(".search-results");
 const searchBar = document.querySelector("#search-bar");
 const searchLinksContainer = document.querySelector(".search-links");
 const searchLinksElements = document.querySelectorAll(".search-link");
+
+//VARIABLES for FILTERING
+const longSleeve = document.querySelector("#long-sleeve");
 
 //variables for displaying search result num
 const searchResultNum = document.createElement("p");
@@ -96,7 +100,7 @@ const displaySearchResults = function (arr, searchValue) {
       searchCard.classList.add("search-card");
       searchCard.innerHTML = `
         <div class="search-img-container">
-          <img class="search-image" src=${el.image} alt="">
+            <img class="search-image" src=${el.image} alt="">
         </div>
         <div class="search-card-info">
           <p class="search-card-name">${el.name}</p>
@@ -112,6 +116,8 @@ const displaySearchResults = function (arr, searchValue) {
     showErrorMessage();
   }
 };
+
+//
 
 //----------------MAIN FUNCTIONS
 
@@ -197,3 +203,31 @@ const viewAll = function (arr) {
   displayProducts(data);
 };
 viewAllBtn.addEventListener("click", viewAll);
+
+//EVENT LISTENER FOR CARDS
+
+const saveClickedItem = (e) => {
+  const imgSrc = e.target.src;
+  console.log(e.target);
+  const newArr = data.filter((el) => el.image2 === imgSrc);
+  //saved the new ARR in local storage
+  localStorage.setItem("clickedItem", JSON.stringify(newArr));
+  console.log(newArr);
+  const openNewPage = window.open("product-page.html", "_self");
+};
+main.addEventListener("click", saveClickedItem);
+
+//FILTER BY STYLE
+
+//long-sleeve
+const filterLongSleeve = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "long-sleeve");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+longSleeve.addEventListener("click", filterLongSleeve);
+
+//FILTER BY LENGTH
+
+//FILTER by color - red

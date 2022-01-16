@@ -20,8 +20,185 @@ const searchBar = document.querySelector("#search-bar");
 const searchLinksContainer = document.querySelector(".search-links");
 const searchLinksElements = document.querySelectorAll(".search-link");
 
-//VARIABLES for FILTERING
+//VARIABLES for FILTERING ---erol
+// Style
 const longSleeve = document.querySelector("#long-sleeve");
+const shortSleeve = document.querySelector("#short-sleeve");
+const sleeveless = document.querySelector("#sleeveless");
+const offShoulder = document.querySelector("#off-shoulder");
+// Colors
+const black = document.querySelector("#black");
+const white = document.querySelector("#white");
+const pink = document.querySelector("#pink");
+const cream = document.querySelector("#cream");
+const red = document.querySelector("#red");
+const orange = document.querySelector("#orange");
+const brown = document.querySelector("#brown");
+const green = document.querySelector("#green");
+const blue = document.querySelector("#blue");
+const grey = document.querySelector("#grey");
+const lilac = document.querySelector("#lilac");
+const yellow = document.querySelector("#yellow");
+// Length
+ const mini = document.querySelector("#mini");
+ const midi = document.querySelector("#midi");
+ const maxi = document.querySelector("#maxi");
+
+//FILTER BY STYLE -- Erol
+//long-sleeve
+const filterLongSleeve = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "long-sleeve");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+longSleeve.addEventListener("click", filterLongSleeve);
+// short-sleeve
+const filterShortSleeve = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "short-sleeve");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+shortSleeve.addEventListener("click", filterShortSleeve);
+// sleeveless
+const filterSleeveless = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "sleeveless");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+sleeveless.addEventListener("click", filterSleeveless);
+// off-shoulder
+const filterOffShoulder = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.style === "off-shoulder");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+offShoulder.addEventListener("click", filterOffShoulder);
+//FILTER by color
+// black
+const filterBlack = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "black");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+black.addEventListener("click", filterBlack);
+// white
+const filterWhite = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "white");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+white.addEventListener("click", filterWhite);
+//pink
+const filterPink = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "pink");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+pink.addEventListener("click", filterPink);
+// cream
+const filterCream = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "cream");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+cream.addEventListener("click", filterCream);
+// red
+const filterRed = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "red");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+red.addEventListener("click", filterRed);
+// orange
+const filterOrange = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "orange");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+orange.addEventListener("click", filterOrange);
+// brown
+const filterBrown = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "brown");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+brown.addEventListener("click", filterBrown);
+// green
+const filterGreen = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "green");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+green.addEventListener("click", filterGreen);
+// blue
+const filterBlue = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "blue");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+blue.addEventListener("click", filterBlue);
+// grey
+const filterGrey = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "grey");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+grey.addEventListener("click", filterGrey);
+// lilac
+const filterLilac = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "lilac");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+lilac.addEventListener("click", filterLilac);
+// yellow
+const filterYellow = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.color === "yellow");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+yellow.addEventListener("click", filterYellow);
+//FILTER BY LENGTH
+// mini
+const filterMini = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.length === "mini");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+mini.addEventListener("click", filterMini);
+// midi
+const filterMidi = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.length === "midi");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+midi.addEventListener("click", filterMidi);
+// maxi
+const filterMaxi = () => {
+  clearMain();
+  const filteredArray = data.filter((el) => el.length === "maxi");
+  // console.log(filteredArray);
+  displayProducts(filteredArray);
+};
+maxi.addEventListener("click", filterMaxi);
 
 //variables for displaying search result num
 const searchResultNum = document.createElement("p");
@@ -219,14 +396,6 @@ main.addEventListener("click", saveClickedItem);
 
 //FILTER BY STYLE
 
-//long-sleeve
-const filterLongSleeve = () => {
-  clearMain();
-  const filteredArray = data.filter((el) => el.style === "long-sleeve");
-  // console.log(filteredArray);
-  displayProducts(filteredArray);
-};
-longSleeve.addEventListener("click", filterLongSleeve);
 
 //FILTER BY LENGTH
 

@@ -22,6 +22,9 @@ body {
   width: 100%;
 }
 
+a{
+  cursor: pointer;
+}
 .logo {
   position: fixed;
   top: 100px;

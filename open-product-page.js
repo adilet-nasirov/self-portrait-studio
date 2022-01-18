@@ -49,8 +49,10 @@ const displayItem = () => {
         <div class="product-delivery-info">
           <p>We expect to dispatch this item within 1-2 working days.</p>
           <p>All orders sent on a priority delivery service.</p>
-          <a href="">Find out more — Contact Us</a>
-          <a href="">See details</a>
+          <div>
+            <a href="">Find out more — Contact Us</a>
+            <a href="">See details</a>
+          </div>
         </div>
       </div>
     </div>

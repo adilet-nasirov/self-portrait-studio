@@ -130,11 +130,13 @@ main {
   border: 1px solid black;
   border-right: none;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .img-container img {
   height: 100%;
-  width: auto;
 }
 
 .product-info {
@@ -193,9 +195,10 @@ main {
   width: 100%;
   justify-content: space-between;
   text-decoration: none;
+  padding-right: 40px;
 }
 .product-delivery-info div a {
-  color: inherit;
+  color: black;
 }
 
 /* MOBILE VERSION*/

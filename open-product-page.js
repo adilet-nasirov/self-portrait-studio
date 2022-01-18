@@ -5,18 +5,8 @@ const data = getData();
 //VARIABLES
 const main = document.querySelector(".product-container");
 
-// export const saveClickedItem = (e) => {
-//   const imgSrc = e.target.src;
-//   // console.log(imgSrc);
-//   const newArr = data.filter((el) => el.image2 === imgSrc);
-//   //saved the new ARR in local storage
-//   localStorage.setItem("clickedItem", JSON.stringify(newArr));
-//   // console.log(newArr);
-// };
-
 const displayItem = () => {
   const item = JSON.parse(localStorage.getItem("clickedItem"));
-  console.log(item[0]);
   // console.log(item[0].image);
   main.innerHTML = `
     <div class="product-main">
@@ -43,7 +33,7 @@ const displayItem = () => {
             <p>US Size</p>
           </div>
           <div class="add-button">
-            <a href="">ADD TO CART</a>
+            <a href="" id='${item[0].name}'>ADD TO CART</a>
           </div>
         </div>
         <div class="product-delivery-info">
@@ -59,3 +49,40 @@ const displayItem = () => {
   </div>`;
 };
 displayItem();
+
+const addToCart = () => {
+  const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
+  const itemClicked = JSON.parse(localStorage.getItem("clickedItem"));
+  let id = itemClicked[0].name;
+  if (itemsOnCart) {
+    const keys= Object.keys(itemsOnCart)
+    if (keys.includes(id)) {
+      console.log(itemsOnCart);
+      let quantity = itemsOnCart[id] + 1;
+      const items = {
+        ...itemsOnCart,
+        [id]: quantity,
+      };
+      localStorage.setItem("itemsOnCart", JSON.stringify(items));
+    } else {
+      const obj = {
+        ...itemsOnCart,
+        [id]: 1,
+      };
+      localStorage.setItem("itemsOnCart", JSON.stringify(obj));
+    }
+  } else {
+    const obj = {
+      [id]: 1,
+    };
+    localStorage.setItem("itemsOnCart", JSON.stringify(obj));
+  }
+};
+
+const addEvent = () => {
+  const item = JSON.parse(localStorage.getItem("clickedItem"));
+  const btnAddToCart = document.getElementById(`${item[0].name}`);
+  btnAddToCart.addEventListener("click", addToCart);
+};
+
+addEvent();

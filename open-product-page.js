@@ -45,8 +45,17 @@ const displayItem = () => {
       </div>
     </div>
   </div>`;
+  totalItems();
 };
 displayItem();
+
+function totalItems(){
+  const itemsOnCart = JSON.parse(localStorage.getItem('itemsOnCart'))
+  const itemValues = Object.values(itemsOnCart);
+  const total = itemValues.reduce((a,b)=>a+b,0)
+  const spanForCart=document.querySelector('#qtyOnCart')
+  spanForCart.innerHTML=total;
+}
 
 const addToCart = () => {
   const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
@@ -75,6 +84,8 @@ const addToCart = () => {
     };
     localStorage.setItem("itemsOnCart", JSON.stringify(obj));
   }
+  alert('Successfully added to your cart!')
+  totalItems();
 };
 
 const addEvent = () => {

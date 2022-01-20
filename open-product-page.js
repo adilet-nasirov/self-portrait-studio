@@ -49,12 +49,17 @@ const displayItem = () => {
 };
 displayItem();
 
-function totalItems(){
-  const itemsOnCart = JSON.parse(localStorage.getItem('itemsOnCart'))
-  const itemValues = Object.values(itemsOnCart);
-  const total = itemValues.reduce((a,b)=>a+b,0)
-  const spanForCart=document.querySelector('#qtyOnCart')
-  spanForCart.innerHTML=total;
+function totalItems() {
+  const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
+  const spanForCart = document.querySelector("#qtyOnCart");
+
+  if (itemsOnCart) {
+    const itemValues = Object.values(itemsOnCart);
+    const total = itemValues.reduce((a, b) => a + b, 0);
+    spanForCart.innerHTML = total;
+  }else{
+    spanForCart.innerHTML = 0;
+  }
 }
 
 const addToCart = () => {
@@ -62,7 +67,7 @@ const addToCart = () => {
   const itemClicked = JSON.parse(localStorage.getItem("clickedItem"));
   let id = itemClicked[0].name;
   if (itemsOnCart) {
-    const keys= Object.keys(itemsOnCart)
+    const keys = Object.keys(itemsOnCart);
     if (keys.includes(id)) {
       console.log(itemsOnCart);
       let quantity = itemsOnCart[id] + 1;
@@ -84,7 +89,7 @@ const addToCart = () => {
     };
     localStorage.setItem("itemsOnCart", JSON.stringify(obj));
   }
-  alert('Successfully added to your cart!')
+  alert("Successfully added to your cart!");
   totalItems();
 };
 

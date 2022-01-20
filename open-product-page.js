@@ -53,7 +53,7 @@ function totalItems() {
   const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
   const spanForCart = document.querySelector("#qtyOnCart");
 
-  if (itemsOnCart) {
+  if (!itemsOnCart===null) {
     const itemValues = Object.values(itemsOnCart);
     const total = itemValues.reduce((a, b) => a + b, 0);
     spanForCart.innerHTML = total;

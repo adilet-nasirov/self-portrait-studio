@@ -45,7 +45,7 @@ const displayItem = () => {
       </div>
     </div>
   </div>`;
-  totalItems();
+  // totalItems();
 };
 displayItem();
 
@@ -53,14 +53,15 @@ function totalItems() {
   const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
   const spanForCart = document.querySelector("#qtyOnCart");
 
-  if (!itemsOnCart===null) {
+  if (itemsOnCart !== null) {
     const itemValues = Object.values(itemsOnCart);
     const total = itemValues.reduce((a, b) => a + b, 0);
     spanForCart.innerHTML = total;
-  }else{
+  } else {
     spanForCart.innerHTML = 0;
   }
 }
+totalItems();
 
 const addToCart = () => {
   const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));

@@ -40,9 +40,9 @@ const grey = document.querySelector("#grey");
 const lilac = document.querySelector("#lilac");
 const yellow = document.querySelector("#yellow");
 // Length
- const mini = document.querySelector("#mini");
- const midi = document.querySelector("#midi");
- const maxi = document.querySelector("#maxi");
+const mini = document.querySelector("#mini");
+const midi = document.querySelector("#midi");
+const maxi = document.querySelector("#maxi");
 
 //FILTER BY STYLE -- Erol
 //long-sleeve
@@ -207,12 +207,17 @@ searchResultNum.classList.add("search-result-number");
 //-----------HELPER FUNCTIONS
 
 //show total number of items on cart
-function totalItems(){
-  const itemsOnCart = JSON.parse(localStorage.getItem('itemsOnCart'))
-  const itemValues = Object.values(itemsOnCart);
-  const total = itemValues.reduce((a,b)=>a+b,0)
-  const spanForCart=document.querySelector('#qtyOnCart')
-  spanForCart.innerHTML=total;
+function totalItems() {
+  const itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
+  const spanForCart = document.querySelector("#qtyOnCart");
+
+  if (itemsOnCart !== null) {
+    const itemValues = Object.values(itemsOnCart);
+    const total = itemValues.reduce((a, b) => a + b, 0);
+    spanForCart.innerHTML = total;
+  } else {
+    spanForCart.innerHTML = 0;
+  }
 }
 totalItems();
 //Function to display all products
@@ -233,7 +238,6 @@ const displayProducts = function (arr) {
     main.appendChild(cardDiv);
   });
   // totalItems();
-
 };
 //calling this function to display all dresses in the very beginning
 displayProducts(data);
@@ -406,7 +410,6 @@ const saveClickedItem = (e) => {
 main.addEventListener("click", saveClickedItem);
 
 //FILTER BY STYLE
-
 
 //FILTER BY LENGTH
 

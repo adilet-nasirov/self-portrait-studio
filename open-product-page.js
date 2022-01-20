@@ -32,8 +32,8 @@ const displayItem = () => {
           <div>
             <p>US Size</p>
           </div>
-          <div class="add-button">
-            <a href="" id='${item[0].name}'>ADD TO CART</a>
+          <div class="add-button" id='${item[0].name}'>
+            <a>ADD TO CART</a>
           </div>
         </div>
         <div class="product-delivery-info">

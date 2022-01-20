@@ -179,6 +179,7 @@ main {
 
 .add-button {
   background-color: black;
+  cursor: pointer;
 }
 .add-button a {
   text-decoration: none;

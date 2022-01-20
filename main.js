@@ -206,6 +206,15 @@ searchResultNum.classList.add("search-result-number");
 
 //-----------HELPER FUNCTIONS
 
+//show total number of items on cart
+function totalItems(){
+  const itemsOnCart = JSON.parse(localStorage.getItem('itemsOnCart'))
+  const itemValues = Object.values(itemsOnCart);
+  const total = itemValues.reduce((a,b)=>a+b,0)
+  const spanForCart=document.querySelector('#qtyOnCart')
+  spanForCart.innerHTML=total;
+}
+totalItems();
 //Function to display all products
 const displayProducts = function (arr) {
   arr.forEach((el) => {
@@ -223,6 +232,8 @@ const displayProducts = function (arr) {
       </div>`;
     main.appendChild(cardDiv);
   });
+  // totalItems();
+
 };
 //calling this function to display all dresses in the very beginning
 displayProducts(data);

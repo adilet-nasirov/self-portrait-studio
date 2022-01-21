@@ -15,20 +15,33 @@
     <title>Cart</title>
   </head>
   <body>
-    <header>
-      <div class="headerName">
+    <!-- <header> 
+       <div class="headerName">
         <i class="fas fa-shopping-cart fa-2x"></i>
         <h1 style="display: inline; margin-left: 5px">Your cart</h1>
+      </div> 
+
+        <div class="totalItems">
+           <p class="subtotal">Subtotal(<span id="itemNum"></span> items): total price <strong id="price"></strong></p> -->
+    <!-- <a href="checkout.html"><button class="checkout">Go to Checkout</button></a>
       </div>
-    </header>
+    </header>   -->
     <main>
-      <div class="totalItems">
-          <p class="subtotal">Subtotal(<span id="itemNum"></span> items): total price <strong id="price"></strong></p>
-          <a href="checkout.html"><button class="checkout">Proceed to Checkout</button></a>
-      </div>
       <div class="container"></div>
     </main>
-    <footer>Copyright</footer>
+   
+      <div id="check"      >
+        <a href="checkout.html" id="btn-checkout"
+        ><button class="checkout" >Go to Checkout</button>
+        </a>
+      </div>
+      <div class="totalItems">
+        <p class="subtotal">
+          TOTAL<span id="itemNum"></span>
+          <strong id="price"></strong>
+        </p>
+      </div>
+  
 
     <script type="module" src="cart.js"></script>
   </body>

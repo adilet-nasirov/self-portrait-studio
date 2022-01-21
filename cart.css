@@ -4,11 +4,13 @@
  body{
      margin: 0;
      padding: 0;
+     color: rgb(67, 67, 67);
+     font-family: sans-serif;
  }
  
  header{
      height: 100px;
-     background-color: darkslateblue;
+     background-color: rgb(207, 211, 214);
      color: white;
      display: flex;
      justify-content: space-evenly;
@@ -16,26 +18,23 @@
 .headerName{
     margin: auto;
 }
-
- footer{
-    height: 100px;
-    background-color: darkslateblue;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
 
 .card{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
-    background-color: rgb(246, 245, 244);
+    
+    /* background-color: rgb(246, 245, 244); */
 }
 
 .card img{
-    width: 200px;
+    width: 250px;
 }
 
 .priceDiv{
@@ -43,18 +42,18 @@
     margin: 30px;
 }
 button{
-    padding: 7px;
-    border: darkslateblue solid 1px;
-    background-color: darkslateblue;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 80px;
+   
+    
+    font-size: 17px;
+    border: none;
+    background: none;
+    text-decoration-line: underline;
+    cursor: pointer;
 }
 button:hover{
-    background-color: whitesmoke;
-    color: darkslateblue;
-    font-weight: bold;
+    text-decoration-line: none;
+    
+    
 }
 
 .imgDiv{
@@ -62,7 +61,8 @@ button:hover{
 }
 small{
     font-size: 17px;
-    color: forestgreen;
+    
+   
 }
 select{
     font-size: 18px;
@@ -72,35 +72,72 @@ select{
     margin-left: 30px;
 }
 .qty{
+    margin-top: 30px;
+    /* display: flex; */
+    /* place-content: center;  */
+    /* font-size: 20px; */
+    
+    /* width: 60px; */
+}
+.totalItems{
     display: flex;
-    place-content: center;
-    font-size: 20px;
-    /* border: #000 solid 1px; */
-    width: 60px;
+    justify-content: center;
 }
 
 .subtotal{
     font-size: 25px;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .totalItems{
     text-align: center;
-    background-color:lavender;
+    /* background-color:lavender; */
     padding: 13px;
+    
 }
 .checkout{
-    width: 250px;
-    border: #F7CA00 solid 1px;
-    border-radius: 10px;
-    background-color: #F7CA00;
-    color: #000;
-    margin: 10px;
+    /* width: 250px; */
+    /* background-color: #000; */
+    color: white;
+    /* margin: 15px; */
+      /* border: none; */
+    /* background: none; */
+    text-decoration-line: none;
+    font-size: 23px;
+
+    /* cursor: pointer; */
 }
-.checkout:hover{
-    background-color: #d4af0a;
-    color: black;
-    font-weight: normal;
+#btn-checkout{
+    background-color:#000 ;
+    color: white;
+    padding: 15px 96px;
+}
+#btn-checkout:hover{
+    background-color: rgb(65, 58, 58);
+}
+
+.eachPrice{
+    font-size: 15px;
+    color: burlywood;
+    /* margin-bottom: 80px; */
+}
+#check{
+    margin-top: 4rem;
+    text-align: center;
+    /* padding: auto; */
+    width: 100%;
+}
+.remove{
+    color: rgb(102, 85, 85);
+    margin-top: 80px;
+    margin-left: 0;
+    padding-left: 0;
 }
 main{
     padding: 10px 10rem;
+}
+#itemNum{
+    display: none;
 }

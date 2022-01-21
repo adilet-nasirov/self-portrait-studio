@@ -90,7 +90,7 @@ const addToCart = () => {
     };
     localStorage.setItem("itemsOnCart", JSON.stringify(obj));
   }
-  alert("Successfully added to your cart!");
+  // alert("Successfully added to your cart!");
   totalItems();
 };
 

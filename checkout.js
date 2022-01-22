@@ -16,6 +16,10 @@ const displayItemsOnCart = (arr) => {
   }
   const num= document.querySelector('#num')
   num.innerHTML=arr.length;
+  const pTotal=document.createElement('p');
+  pTotal.className='pTotal';
+  pTotal.innerHTML=`TOTAL: $${getTotalPrice(arr)}.00`;
+  container.appendChild(pTotal);
 //   const totP=document.createElement('p')
 };
 
@@ -30,4 +34,14 @@ const startPage=()=>{
     })
     return(array)
 }
+
+const getTotalPrice = (arr) => {
+  let totPrice = 0;
+  const productsInCart = JSON.parse(localStorage.getItem("itemsOnCart"));
+  for (let el of arr) {
+    let price = Number(el.price.substring(1));
+    totPrice += price * productsInCart[el.name];
+  }
+  return totPrice;
+};
 displayItemsOnCart(startPage());

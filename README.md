@@ -2,8 +2,10 @@
 
 Tasks assigned:
 
-Html/css : Adilet;
-Filtering by style: Peri;
+Html/css : Chynara;
+Filtering by style: Erol;
 Filtering by color : Erol;
-Filtering by length : Kasiet;
+Filtering by length : Erol;
 Search & sort : Chynara;
+cart: Adilet
+cart styling: Aiperi
